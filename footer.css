@@ -1,0 +1,215 @@
+/* Estilos generales del footer */
+footer {
+    background-color: #939d2e; /* Fondo */
+    color: white; /* Texto color blanco */
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer .box {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+footer .box h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: white; /* Color de los títulos */
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+}
+
+footer .box a {
+    display: block;
+    margin: 5px 0;
+    color: white; /* Color de los enlaces */
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+footer .box a:hover {
+    color: #ff6f61;
+}
+
+footer .credit {
+    margin: 20px 0;
+    font-size: 0.9rem;
+}
+
+footer .credit span {
+    color: white;
+}
+
+footer .logos-footer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+footer .logos-footer img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Hacer las imágenes circulares */
+    transition: transform 0.3s ease;
+    cursor: pointer; /* Cambiar a puntero */
+}
+
+footer .logos-footer img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para los íconos */
+footer .box a.fa-brands {
+    font-size: 3rem;
+    color: white; /* Color de los íconos */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .box a.fa-brands:hover {
+    color: #ff6f61;
+    transform: scale(1.1);
+}
+
+/* Estilos para los medios de pago */
+footer .payment-methods {
+    margin-top: 20px;
+}
+
+footer .payment-methods .tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+footer .payment-methods .tooltip img {
+    width: 60px;
+    height: 60px;
+    margin: 0 10px;
+    border-radius: 50%; /* Hacer las imágenes circulares */
+    transition: transform 0.3s ease;
+    cursor: pointer; /* Cambiar a puntero */
+}
+
+footer .payment-methods .tooltip img:hover {
+    transform: scale(1.1);
+}
+
+/* Tooltip Styling */
+footer .payment-methods .tooltip .tooltip-text {
+    visibility: hidden;
+    width: 120px; /* Ancho del tooltip */
+    background-color: #333; /* Fondo del tooltip */
+    color: #fff; /* Texto del tooltip */
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Posición del tooltip */
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.9rem;
+}
+
+footer .payment-methods .tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Información debajo de los medios de pago */
+footer .payment-info {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    footer {
+        padding: 30px 0;
+    }
+
+    footer .box-container {
+        gap: 15px;
+    }
+
+    footer .box {
+        min-width: 200px;
+    }
+
+    footer .box h3 {
+        font-size: 1.3rem;
+    }
+
+    footer .box a {
+        font-size: 0.9rem;
+    }
+
+    footer .logos-footer img {
+        width: 40px;
+        height: 40px;
+    }
+
+    footer .payment-methods .tooltip img {
+        width: 50px;
+        height: 50px;
+    }
+
+    footer .payment-info {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 20px 0;
+    }
+
+    footer .box-container {
+        gap: 10px;
+    }
+
+    footer .box {
+        min-width: 150px;
+    }
+
+    footer .box h3 {
+        font-size: 1.1rem;
+    }
+
+    footer .box a {
+        font-size: 0.8rem;
+    }
+
+    footer .logos-footer img {
+        width: 30px;
+        height: 30px;
+    }
+
+    footer .payment-methods .tooltip img {
+        width: 40px;
+        height: 40px;
+    }
+
+    footer .payment-info {
+        font-size: 0.8rem;
+    }
+}

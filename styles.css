@@ -1,0 +1,846 @@
+@import url(headerNav.css);
+@import url(footer.css);
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f8ff;
+    text-align: justify;
+}
+
+
+#pse-btn-nav {
+    background-image: url('pse.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    transition: opacity 0.3s;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 40px;
+}
+
+#pse-btn-nav:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    #pse-btn-nav {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Banner*/
+.hero {
+    height: 80vh;
+    background: url('BANNER FINAL.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.hero h1 {
+    margin: 0;
+    display: inline-block;
+    padding: 0.5em 1em;
+    font: small-caps 150%/200% serif;
+    font-size: 2em;
+}
+
+.hero .hero-content {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .hero {
+        height: 70vh;
+    }
+
+    .hero h1 {
+        font-size: 1.75em;
+    }
+
+    .hero .hero-content {
+        bottom: 40px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero {
+        height: 60vh;
+    }
+
+    .hero h1 {
+        font-size: 1.5em;
+    }
+
+    .hero .hero-content {
+        bottom: 30px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 50vh;
+    }
+
+    .hero h1 {
+        font-size: 1.25em;
+    }
+
+    .hero .hero-content {
+        bottom: 20px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        height: 40vh;
+       
+    }
+
+    .hero h1 {
+        font-size: 0.5em;
+    }
+
+    .hero .hero-content {
+        bottom: 50px;
+        padding: 4px 8px;
+      
+        font-size: 8px;
+    }
+}
+/* Banner*/
+
+
+/* Estilos generales de la barra social */
+.social-bar {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(51, 51, 51, 0.8); /* Fondo oscuro con 80% de opacidad */
+    padding: 0.5em;
+    border-radius: 5px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto; /* Ajuste para evitar overflow horizontal */
+    max-width: 60px; /* Limita el ancho máximo */
+    overflow: hidden; /* Evita desbordamientos */
+}
+
+/* Estilos de los iconos sociales */
+.social-icon {
+    display: block;
+    margin: 0.5em 0;
+}
+
+.social-icon img {
+    width: 30px; /* Tamaño estándar del icono */
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icon:hover img,
+.social-icon:focus img {
+    transform: scale(1.1); /* Efecto de zoom al pasar el ratón por encima */
+}
+
+/* Media queries para responsive design */
+@media (max-width: 768px) {
+    .social-bar {
+        right: auto;
+        left: 0; /* Mueve la barra social a la izquierda */
+        top: 60%; /* Ajusta la posición vertical para pantallas más pequeñas */
+        max-width: 50px; /* Reduce el ancho máximo en pantallas más pequeñas */
+    }
+
+    .social-icon img {
+        width: 25px; /* Tamaño del icono en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 450px) {
+    .social-bar {
+        right: auto;
+        left: 0; /* Asegura que la barra esté a la izquierda */
+        top: 70%; /* Ajusta la posición vertical para pantallas muy pequeñas */
+        max-width: 40px; /* Reduce aún más el ancho máximo en pantallas muy pequeñas */
+    }
+
+    .social-icon img {
+        width: 20px; /* Tamaño del icono en pantallas muy pequeñas */
+    }
+}
+
+@media (max-width: 360px) {
+    .social-bar {
+        right: auto;
+        left: 0; /* Asegura que la barra esté a la izquierda */
+        top: 75%; /* Ajuste de la posición vertical para pantallas extremadamente pequeñas */
+        max-width: 35px; /* Ajusta el ancho máximo en pantallas extremadamente pequeñas */
+        padding: 0.2em; /* Reducción del padding para ahorrar espacio */
+    }
+
+    .social-icon img {
+        width: 16px; /* Tamaño del icono para pantallas extremadamente pequeñas */
+    }
+}
+
+@media (max-width: 412px) {
+    .social-bar {
+        right: auto;
+        left: 0; /* Asegura que la barra esté a la izquierda */
+        top: 70%; /* Ajuste de la posición vertical para pantallas con resolución 412px de ancho */
+        max-width: 45px; /* Ajusta el ancho máximo para pantallas de 412px de ancho */
+    }
+
+    .social-icon img {
+        width: 22px; /* Tamaño del icono ajustado para pantallas de 412px de ancho */
+    }
+}
+
+
+.content {
+    background: white;
+    padding: 2em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    position: relative;
+    margin-top: -50px;
+}
+
+.content-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.text-content,
+.image-content {
+    flex: 1;
+    min-width: 300px;
+    margin: 1em;
+}
+
+.text-content h2 {
+    color: #003366;
+}
+
+.text-content p {
+    color: #333;
+}
+
+.text-content button {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+
+.text-content button:hover {
+    background-color: #005599;
+}
+
+.image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.additional-content {
+    padding: 2em;
+}
+
+.icon-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.icon-container i {
+    font-size: 4em;
+    color: #ff6f61;
+    margin: 0 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    border-radius: 50%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.icon-container i:hover {
+    color: #003366;
+    transform: scale(1.1);
+}
+
+.highlighted-text {
+    position: relative;
+    display: inline-block;
+    color: #003366;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.highlighted-text::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 140%;
+    height: 30px;
+    background: linear-gradient(to right, transparent, transparent 10%, #ff6f61 10%, #ff6f61 90%, transparent 90%);
+    border-radius: 50% 50% 0 0;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.floating-about-us {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+    position: relative;
+    margin-top: 20px;
+    
+}
+
+.floating-about-us:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.floating-about-us .vision,
+.floating-about-us .mision {
+    width: 48%;
+    padding: 30px;
+    background: linear-gradient(135deg, #f8f9fa, #e2e6ea);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.floating-about-us .vision:hover,
+.floating-about-us .mision:hover {
+    background: linear-gradient(135deg, #ffffff, #f1f3f5);
+}
+
+.floating-about-us h2 {
+    color: #0054A4;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.floating-about-us h2:hover {
+    color: #003366;
+}
+
+.floating-about-us p {
+    color: #333;
+    line-height: 1.8;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    transition: color 0.3s;
+}
+
+.floating-about-us p:hover {
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .floating-about-us {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 60px;
+    }
+
+    .floating-about-us .vision,
+    .floating-about-us .mision {
+        width: 100%;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 480px) {
+    .floating-about-us {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 350px; /* Ajuste para separar más la misión y la visión de la foto en dispositivos móviles */
+        padding: 10px;
+    }
+
+    .floating-about-us .vision,
+    .floating-about-us .mision {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .floating-about-us h2 {
+        font-size: 1.2em;
+    }
+
+    .floating-about-us p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 320px) {
+    .floating-about-us {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 120px; /* Ajuste para separar más la misión y la visión de la foto en dispositivos móviles */
+        padding: 10px;
+    }
+
+    .floating-about-us .vision,
+    .floating-about-us .mision {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .floating-about-us h2 {
+        font-size: 1.2em;
+    }
+
+    .floating-about-us p {
+        font-size: 0.9em;
+    }
+}
+
+/* Our Spaces */
+
+.browse {
+    text-align: center;
+    padding: 20px;
+    text-align: justify;
+}
+
+.browse .section-title {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.browse .section-title::before,
+.browse .section-title::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background-color: #ff5a5f;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.browse .section-title::before {
+    left: 0;
+}
+
+.browse .section-title::after {
+    right: 0;
+}
+
+.adventure-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+    width: 100%; /* Ajusta el ancho para que sea responsive */
+    max-width: 300px; /* Limita el ancho máximo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+.adventure-card:hover {
+    transform: translateY(-10px);
+}
+
+.adventure-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.adventure-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.adventure-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.adventure-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #777;
+    
+}
+
+/* Estilos para la fecha de aventura y los likes */
+.adventure-date,
+.adventure-likes {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos para los likes con corazón */
+.adventure-likes:before {
+    content: "\2665"; /* Unicode para el símbolo del corazón */
+    margin-right: 5px;
+    color: #ff5a5f;
+}
+
+/* Estilos para las estrellas */
+.stars {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em; /* Tamaño de las estrellas */
+    color: #FFD700; /* Color amarillo para las estrellas */
+}
+
+.stars .fa-star {
+    margin-right: 5px; /* Espacio entre las estrellas */
+}
+
+
+.adventure-content p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.read-more {
+    background-color: #ff5a5f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.read-more:hover {
+    background-color: #e0484d;
+}
+
+.browse {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.adventure-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.adventure-card:hover {
+    transform: translateY(-10px);
+}
+
+.adventure-card img {
+    width: 100%;
+    height: auto;
+}
+
+.adventure-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.adventure-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.adventure-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #777;
+}
+
+
+
+.adventure-content p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #555;
+    text-align: justify;
+}
+
+
+
+/* Contact Map */
+.contact-map-section {
+    position: relative;
+    width: 100%;
+    min-height: 600px; /* Altura mínima para la sección */
+    background: #f9f9f9; /* Fondo claro para la sección */
+    padding-bottom: 20px; /* Espacio adicional para el footer */
+}
+
+.map-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Envía el mapa al fondo */
+    overflow: hidden;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.contact-form-container {
+    position: relative;
+    z-index: 1; /* Mantiene el formulario y calendario sobre el mapa */
+    background: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Ajuste al 90% del ancho de la pantalla para mejorar el ajuste */
+    max-width: 600px; /* Limita el ancho máximo */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.contact-form {
+    background: rgba(255, 255, 255, 0.8); /* Fondo blanco con mayor transparencia */
+    padding: 15px; /* Ajusta el padding para pantallas pequeñas */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    margin-bottom: 15px;
+    font-size: 1.2em; /* Ajuste del tamaño de fuente */
+}
+
+.contact-form input, .contact-form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 0.9em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 22px); /* Ajuste del ancho de los campos */
+    background: rgba(255, 255, 255, 0.8); /* Fondo de los campos semi-transparente */
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    font-size: 0.9em; /* Tamaño de fuente reducido para botones */
+    background: #ff6f61;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #e55a4e;
+}
+
+.calendar-container {
+    background: linear-gradient(45deg, #939d2e, #2b500e);
+    padding: 15px; /* Ajusta el padding para pantallas pequeñas */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    max-width: 100%; /* Asegura que no se desborde en pantallas pequeñas */
+    box-sizing: border-box;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; /* Ajusta el margen */
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px; /* Reduce el espacio entre los días */
+}
+
+.day {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 8px; /* Ajuste del padding */
+    border-radius: 6px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    font-size: 0.8em; /* Tamaño de fuente reducido */
+}
+
+.day:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: scale(1.05); /* Ajusta la escala al pasar el mouse */
+}
+
+.day.current-day {
+    background-color: #ffd700;
+}
+
+.day.reserved {
+    background-color: #ff6347;
+}
+
+/* Media queries para resoluciones pequeñas */
+@media (max-width: 768px) {
+    .contact-form-container {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .contact-form, .calendar-container {
+       /* Ajuste al 100% del contenedor */
+        max-width: none; /* Remueve el ancho máximo */
+    }
+
+    .map-container {
+        height: 300px; /* Ajuste para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form-container {
+        padding: 10px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        padding: 8px;
+        font-size: 0.8em;
+    }
+
+    .contact-form button {
+        padding: 8px 15px;
+        font-size: 0.8em;
+    }
+
+    .calendar-container {
+        padding: 10px;
+    }
+
+    #calendar {
+        grid-template-columns: repeat(4, 1fr); /* Reducido para más espacio */
+    }
+
+    .calendar-header button {
+        font-size: 0.7em; /* Tamaño de fuente reducido para los botones */
+        padding: 6px;
+    }
+}
+
+@media (max-width: 360px) {
+    .contact-form input, .contact-form textarea {
+        font-size: 0.75em;
+    }
+
+    .contact-form button {
+        padding: 6px 12px;
+        font-size: 0.7em;
+    }
+
+    .calendar-container {
+        padding: 8px;
+    }
+
+    #calendar {
+        grid-template-columns: repeat(3, 1fr); /* Ajuste para más espacio */
+    }
+
+    .calendar-header button {
+        font-size: 0.6em; /* Tamaño de fuente aún más reducido */
+        padding: 4px;
+    }
+}
+
+
+
+
